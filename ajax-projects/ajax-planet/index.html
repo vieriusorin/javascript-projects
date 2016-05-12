@@ -1,0 +1,38 @@
+<html>
+
+	<head>
+		<title>Planets App</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			function getPlanetDetails() {
+				$.ajax({
+					url: 'server.php',
+					type: "POST",
+					data: 'planet_name='+$('#planet-name').val(),
+					dataType: 'json',
+					succes: function( response, status, http) {
+						var newSuggestions;
+						$.each( $response, function(index, item) {
+							newSuggestions = newSuggestions + 'Name: ' + item.name + '<br />';
+							newSuggestions = newSuggestions + 'Number of days in a year: ' + item.no_of_days_in_year + '<br />';
+							newSuggestions = newSuggestions + 'Planet Order' + item.order_no + '<br />';
+						})
+
+						$('#suggestion_box').html(newSuggestions);
+					},
+					error: function(http, status, error) {
+						alert('Some error Ocured: ' + error)
+					}
+				})
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div>Planet name: <input type="text" id="planet_name" name="planet_name" onkeyup="getPlanetDetails()"></div>
+		<p style="color: red;">Suggestions</p>
+
+		<p id="suggestion_box">See you Suggestions here</p>
+	</body>
+
+</html>
