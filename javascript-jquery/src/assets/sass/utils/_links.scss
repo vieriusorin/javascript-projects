@@ -1,0 +1,53 @@
+a {
+  color: #222;
+  &:hover,
+  &:focus {
+    color: #222;
+    text-decoration: none;
+  }
+
+  &:active,
+  &:visited {
+    color: #222;
+    text-decoration: none;
+  }
+
+  &[rel="external"] {
+    color: theme-colors("pink");
+  }
+
+  .list-uppercase & {
+    color: theme-colors("white");
+  }
+
+  &.link-more {
+    font-weight: bold;
+    color: theme-colors('pink');
+  }
+
+  &[href^="tel:"],
+  &[href^="fax:"] {
+    color: theme-colors('white');
+    text-decoration: none;
+
+    .widget-contact & {
+      color: #222;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  &[href^="mailto:"] {
+    .widget-contact & {
+      color: theme-colors('pink');
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "helpers/variables";
+
+// bower:scss
+@import "../../../bower_components/bootstrap/scss/bootstrap";
+@import "../../../bower_components/font-awesome/scss/font-awesome";
+// endbower
+
+@import "images/datauri";
+
+//helpers
+@import "helpers/functions";
+@import "helpers/mixins";
+
+//base
+@import "base/animations";
+@import	"base/typography";
+@import	"base/scaffolding";
+
+//components
+@import "components/buttons";
+
+// utils 
+@import "utils/links";
+@import "utils/lists";
+@import "utils/utils";
+
+// third-party
+
+// layout
+
+.browsehappy {
+  background: #ccc;
+  color: #000;
+  margin: 0.2em 0;
+  padding: 0.2em 0;
+}

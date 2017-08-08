@@ -1,0 +1,41 @@
+.is-sticky {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    animation-name: slideInDown;
+    animation-duration: .5s;
+}
+
+time {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.2;
+
+    @include media-breakpoint-up(md) {
+        font-size: 18px;
+    }
+    
+    @include media-breakpoint-up(lg) {
+        font-size: 22px;
+    }
+}
+
+address {
+    font: normal normal 14px/21px $font-family-sans-serif;
+    color: #fff;
+    .phone {
+        font-size: 28px;
+        line-height: 38px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    a[href^="mailto:"] {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "bower-main-files",
+  "description": "Jquery, Bootstrap SASS, Modernizr",
+  "main": "index.js",
+  "authors": [
+    "Sorin Vieriu <sorinvieriu@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap": "v4.0.0-alpha.6",
+    "owl.carousel": "latest",
+    "modernizr": "latest",
+    "font-awesome": "latest"
+  },
+  "overrides": {
+    "bootstrap": {
+      "dependencies": {
+        "jquery": "latest",
+        "tether": "dist/js/tether.min.js"
+      },
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.min.css"
+      ]
+    },
+    "owl.carousel": {
+      "dependencies": {
+        "jquery": "latest"
+      }
+    }
+  }
+}
